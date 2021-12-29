@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container ">
+    <form class="row g-3 needs-validation" method="post" action="{{url_for('downloader')}}" novalidate>
+        
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">YOUTUBE URL</label>
+          <input type="text" class="form-control" id="validationTooltip03" name="url" autocomplete="off" required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip04" class="form-label">FORMATO</label>
+          <select class="form-select" id="validationTooltip04" name="select" required >
+            <option selected disabled value="">Elige formato</option>
+            <option value="audio">Audio</option>
+            <option value="video">Video 720p</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid state.
+          </div>
+        </div>
+        
+        
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">DESCARGAR VIDEO</button>
+        </div>
+      </form>
+
+
+
+</div>
+
+
+<
+
+
+
+
+
+   
+{% endblock %}
